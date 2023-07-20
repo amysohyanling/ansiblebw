@@ -1,0 +1,7 @@
+---
+- name: check all the windows services is running
+  ansible.windows.win_service:
+    name: "{{ item }}"
+    state: started
+  loop:
+    - wuauserv

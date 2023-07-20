@@ -1,0 +1,6 @@
+---
+- name: update and install httpd service for windows server
+  ansible.windows.win_feature:
+    name: Web-Server
+    state: present
+      

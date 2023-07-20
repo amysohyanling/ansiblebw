@@ -1,0 +1,13 @@
+---
+- name: create a snapshot
+  community.vmware.vmware_guest_snapshot:
+    hostname: "{{ hostname }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "{{ folder }}"
+    name: "{{ inventory_hostname }}"
+    state: present
+    snapshot_name: before_reboot
+    description: before_reboot_updated
+  delegate_to: localhost

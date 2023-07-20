@@ -1,0 +1,11 @@
+---
+- name: ensure Windows Virtual Machine is switch on
+  community.vmware.vmware_guest:
+    hostname: vcenter.hpemx.lab 
+    username: isabella13@example.com 
+    password: "{{ password }}"
+    validate_certs: false
+    datacenter: Datacenter
+    name: "{{ name }}"
+    state: poweredon
+  register: deploy

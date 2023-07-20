@@ -1,0 +1,7 @@
+---
+- name: reboot the windows virtual machine
+  ansible.windows.win_reboot:
+
+#- name: Reboot when Web-Server feature requires it
+# ansible.windows.win_reboot:
+# when: iis_install.reboot_required
